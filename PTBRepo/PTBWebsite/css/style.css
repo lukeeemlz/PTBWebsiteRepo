@@ -1,29 +1,80 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+body{
+    font-family:"Source Sans 3";
 }
 
-body{
-    font-family: Montserrat;
+nav a,
+.producto h3,
+.instagram h2,
+.contact button,
+
+strong{
+    font-family: "Montserrat";
     font-weight:700;
 }
 
-.container{
-
-    width:1000px;
-    margin:40px auto;
-    background-color: white;
+.header-right,
+.lang,
+.product p,
+.instagram p,
+.info p,
+.right p {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 400;
 }
 
-header{
+header {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.ptblogo img {
+    width:150px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+nav ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 70px;
+    list-style: none;
+    gap: 35px;
 }
 
-.logo img{ 
-how i do;
+nav a {
+    position: relative;
+    display: inline-block;
+    color: #222;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
 
-    
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #0b56b7;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+
+nav a:hover {
+    color: #0b56b7;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+header-right{
+    display: flex;
+}
