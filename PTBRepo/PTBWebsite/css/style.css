@@ -22,7 +22,7 @@ strong{
     font-weight: 400;
 }
 
-header {
+header{
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -75,6 +75,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-header-right{
+.header-right{
     display: flex;
+    margin-right: 45px; 
 }
