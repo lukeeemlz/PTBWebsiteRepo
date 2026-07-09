@@ -89,6 +89,7 @@ nav a:hover::after {
 }
 
 main{
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     gap: 70px;
@@ -139,7 +140,8 @@ main{
     font-size: 17px;
 }
 
-.contact{
+.contáctanos{
+    background-image: url("../images/ptbblueoverlay.png");
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
@@ -147,15 +149,8 @@ main{
 }
 
 .left{
-    width: 45%;
-}
-
-.right{
-    width: 45%;
-}
-
-.contact button{
-    background:#0b56b7;
+    width: 100%;
+    background-image: url("../images/ptbblueoverlay.png");
     color: white;
     border: none;
     padding: 12px 35px;
@@ -164,11 +159,15 @@ main{
     margin-bottom: 25px;
 }
 
+.right{
+    width: 45%;
+}
+
 .info p,
 .right p{
     margin-bottom: 20px;
     line-height: 1.8;
-    font-size: 19px;
+    font-size: 18px;
 }
 
 .fa-phone,
@@ -186,6 +185,7 @@ main{
     gap: 8px;
     margin: 5px 0;
     margin-left: 15px;
+    font-size: 18px;
 }
 
 .label{
@@ -199,6 +199,10 @@ a{
 
 a:hover{
     color:#0b56b7;
+}
+
+.email{
+    font-size: 18px;
 }
 
 @media(max-width:1200px){
