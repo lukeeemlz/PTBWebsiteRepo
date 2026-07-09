@@ -14,6 +14,7 @@ nav a,
 .producto h3,
 .instagram h2,
 .contact button,
+.instagram p,
 
 strong{
     font-family: "Montserrat";
@@ -23,7 +24,6 @@ strong{
 .header-right,
 .lang,
 .product p,
-.instagram p,
 .info p,
 .right p {
     font-family: "Source Sans 3", sans-serif;
@@ -178,4 +178,81 @@ main{
     font-size: 28px;
     width: 35px;
     margin-right: 10px;
+}
+
+.info p{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 5px 0;
+    margin-left: 15px;
+}
+
+.label{
+    font-weight: bold;
+    font-family: "Montserrat";
+}
+
+a{
+    color:#111;
+}
+
+a:hover{
+    color:#0b56b7;
+}
+
+@media(max-width:1200px){
+    .container{
+        width: 95%;
+    }
+}
+
+@media(max-width:991px){
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .products{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .instagram{
+        width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .left,
+    .right{
+        width: 100%;
+    }
+}
+
+@media(max-width:600px){
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    nav a{
+        text-align: center;
+    }
+    .products{
+        width: 280px;
+    }
+    .product img{
+        height: 220px;
+    }
+    .instagram h2{
+        font-size: 28px;
+    }
+    .contact button{
+        width: 100%;
+    }
+    .info p,
+    .right p{
+        font-size: 16px;
+    }
 }
