@@ -5,7 +5,7 @@ body{
 .container{
     width: 1100;
     margin: 45px auto;
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 35px 40px;
     box-shadow:0 3px 12px rgba(0,0,0,.08);
 }
@@ -13,7 +13,7 @@ body{
 nav a,
 .producto h3,
 .instagram h2,
-.contact button,
+.contáctanos button,
 .instagram p,
 
 strong{
@@ -34,6 +34,21 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
+}
+
+.contáctanos button {
+    margin-top: 20px;
+    background: #0b56b7 !important;
+    color: white !important;
+    height: 50px;
+    width: 225px;
+    font-size: 25px;
+    appearance: none;
+    -webkit-appearance: none;
+
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 .ptblogo img {
@@ -141,7 +156,7 @@ main{
 }
 
 .contáctanos{
-    background-image: url("../images/ptbblueoverlay.png");
+    background-image: url("/images/ptbblueoverlaycrop.png");
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
@@ -150,8 +165,8 @@ main{
 
 .left{
     width: 100%;
-    background-image: url("../images/ptbblueoverlay.png");
-    color: white;
+    background-image: url("/images/ptbblueoverlaycrop.png");
+    color: rgb(255, 255, 255);
     border: none;
     padding: 12px 35px;
     font-size: 22px;
@@ -173,18 +188,15 @@ main{
 .fa-phone,
 .fa-envelope,
 .fa-location-dot{
-    color:#0b56b7;
+    color:#ffffff;
     font-size: 28px;
     width: 35px;
     margin-right: 10px;
 }
 
 .info p{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin: 5px 0;
-    margin-left: 15px;
+    margin: 20px 0 5px 15px;
+    gap: 600px;
     font-size: 18px;
 }
 
@@ -252,9 +264,11 @@ a:hover{
     .instagram h2{
         font-size: 28px;
     }
-    .contact button{
-        width: 100%;
-    }
+    .contáctanos button {
+        background: #0b56b7 !important;
+        color: white !important;
+        border: 5px solid lime !important;
+}
     .info p,
     .right p{
         font-size: 16px;
