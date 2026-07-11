@@ -15,6 +15,7 @@ nav a,
 .instagram h2,
 .contáctanos button,
 .instagram p,
+.indent,
 
 strong{
     font-family: "Montserrat";
@@ -25,9 +26,9 @@ strong{
 .lang,
 .product p,
 .info p,
-.right p {
-    font-family: "Source Sans 3", sans-serif;
-    font-weight: 400;
+.middle p {
+    font-family: "Montserrat";
+    font-weight:500;
 }
 
 header{
@@ -36,7 +37,7 @@ header{
     justify-content:space-between;
 }
 
-.contáctanos button {
+.contáctanos button { /* montse */
     margin-top: 20px;
     background: #0b56b7 !important;
     color: white !important;
@@ -45,10 +46,20 @@ header{
     font-size: 25px;
     appearance: none;
     -webkit-appearance: none;
+    margin-bottom: 20px;
+        text-shadow: 1px 1px 2px black;
 
     border: none;
-    box-shadow: none;
+    box-shadow: 1px 1px 2px black;
     outline: none;
+}
+
+.email{
+    margin-top: 15px;
+}
+
+.middle{
+    margin-top: 15px;
 }
 
 .ptblogo img {
@@ -139,7 +150,7 @@ main{
 }
 
 .instagram h2{
-    font-size: 34px;
+    font-size: 20px;
     font-weight: 300;
     margin-bottom: 18px;
 }
@@ -152,52 +163,87 @@ main{
 .instagram p{
     text-align: left;
     margin-bottom: 35px;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .contáctanos{
     background-image: url("/images/ptbblueoverlaycrop.png");
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
-    gap: 70px;
+    justify-content: flex-start;
+    gap: 1px;
 }
 
 .left{
-    width: 100%;
+    width: 27%;
     background-image: url("/images/ptbblueoverlaycrop.png");
     color: rgb(255, 255, 255);
     border: none;
-    padding: 12px 35px;
+    padding: 25px 60px;
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 25px;
+    text-shadow: 1px 1px 2px black;
 }
 
-.right{
-    width: 45%;
+.middle{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding-top: 80px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    flex: 1;
+    text-shadow: 1px 1px 2px black;
+}
+
+.middle p{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.middle span{
+    margin-left: 0;
 }
 
 .info p,
-.right p{
+.middle p{
     margin-bottom: 20px;
     line-height: 1.8;
     font-size: 18px;
 }
 
 .fa-phone,
-.fa-envelope,
-.fa-location-dot{
+.fa-envelope{
     color:#ffffff;
     font-size: 28px;
     width: 35px;
     margin-right: 10px;
 }
 
-.info p{
-    margin: 20px 0 5px 15px;
-    gap: 600px;
+.fa-location-dot{
+    color:#ffffff;
+    font-size: 28px;
+    width: 35px;
+    margin-right: 0px;
+}
+
+.info p {
     font-size: 18px;
+    margin: 0 0 12px 0;
+}
+
+.indent{
+    display: inline-block;
+    margin-left: 45px;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+.info p.indent{
+    padding-left: 45px;
 }
 
 .label{
@@ -242,7 +288,7 @@ a:hover{
         flex-direction: column;
     }
     .left,
-    .right{
+    .middle{
         width: 100%;
     }
 }
@@ -270,7 +316,7 @@ a:hover{
         border: 5px solid lime !important;
 }
     .info p,
-    .right p{
+    .middle p{
         font-size: 16px;
     }
 }
