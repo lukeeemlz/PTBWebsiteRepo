@@ -24,7 +24,7 @@ strong{
 
 .header-right,
 .lang,
-.product p,
+.producto p,
 .info p,
 .middle p {
     font-family: "Montserrat";
@@ -121,26 +121,27 @@ main{
     gap: 70px;
 }
 
-.products{
+.productos{
     width: 180px;
 }
 
-.product img{
+.producto img{
     width: 100%;
     height: 160px;
     object-fit: cover;
     background-color: #ffffff;
 }
 
-.product h3{
+.producto h3{
     margin-top: 12px;
     font-size: 22px;
-    font-weight: 400;
 }
 
-.product p{
+.producto p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     margin-top: 8px;
-    color: #444;
+    color: #000000;
     font-size: 17px;
 }
 
@@ -150,8 +151,9 @@ main{
 }
 
 .instagram h2{
+    font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 700;
     margin-bottom: 18px;
 }
 
@@ -161,6 +163,8 @@ main{
 }
 
 .instagram p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     text-align: left;
     margin-bottom: 35px;
     font-size: 15px;
@@ -175,7 +179,7 @@ main{
 }
 
 .left{
-    width: 27%;
+    width: 30%;
     background-image: url("/images/ptbblueoverlaycrop.png");
     color: rgb(255, 255, 255);
     border: none;
@@ -277,7 +281,7 @@ a:hover{
     main{
         flex-direction: column;
     }
-    .products{
+    .productos{
         justify-content: center;
         flex-wrap: wrap;
     }
@@ -301,7 +305,7 @@ a:hover{
     nav a{
         text-align: center;
     }
-    .products{
+    .productos{
         width: 280px;
     }
     .product img{
