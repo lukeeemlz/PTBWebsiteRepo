@@ -221,17 +221,17 @@ main{
 
 .fa-phone,
 .fa-envelope{
-    color:#ffffff;
+    color: #fff;
     font-size: 28px;
-    width: 35px;
-    margin-right: 10px;
+    width: 20px;
+    margin-right: 20px;
 }
 
 .fa-location-dot{
-    color:#ffffff;
+    color: #fff;
     font-size: 28px;
-    width: 35px;
-    margin-right: 0px;
+    width: 20px;
+    margin-right: 4px;
 }
 
 .info p {
