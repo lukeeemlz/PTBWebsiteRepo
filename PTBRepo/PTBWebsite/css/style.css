@@ -17,6 +17,7 @@ body {
 nav a,
 .producto h3,
 .instagram h2,
+.Producto1Class,
 .contáctanos button,
 .instagram p,
 .lang,
@@ -31,6 +32,7 @@ strong{
 .header-right,
 .producto p,
 .info p,
+.Producto1Description,
 .middle p {
     font-family: "Montserrat";
     font-weight:500;
@@ -41,7 +43,10 @@ header{
     align-items:center;
     justify-content:space-between;
 }
-
+.producto {
+    display: flex;
+    flex-direction: column;
+}
 .lang {
     font-size: 15px;
     width: 70px;
@@ -70,6 +75,7 @@ header{
     font-size: 18px;
     margin: 0;
 }
+
 
 .contáctanos button { /* montse */
     margin-top: 20px;
@@ -158,8 +164,11 @@ main{
 }
 
 .productos{
-    width: -50px;
-}
+    padding-left: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+} 
 
 .header-right {
     overflow: hidden;
@@ -176,8 +185,8 @@ main{
 }
 
 .producto-imagen img {
-    width: 60px;
-    height: 40px;
+    width: 167px;
+    height: 167px;
 }
 @keyframes scrollRight {
     from {
