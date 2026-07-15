@@ -313,11 +313,26 @@ main{
     text-align: center;
 }
 
-.instagram h2{
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
+.instagram-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.instagram-title h2{
+    background: #0b56b7;
+    color: white;
+
+    padding: 12px 10px;
+
+    font-family: "Montserrat";
+    font-size: 22px;
     font-weight: 700;
-    margin-bottom: 18px;
+
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black;
+
+    margin: 0;
 }
 
 .instagram img{
