@@ -7,7 +7,7 @@ body {
 
 
 
-.container{
+.container{ /* montse */
     margin: 40px;
     background: rgb(255, 255, 255);
     padding: 20px 40px;
@@ -24,7 +24,7 @@ nav a,
 .indent,
 .indentfab,
 
-strong{
+strong { /* montse */
     font-family: "Montserrat";
     font-weight:700;
 }
@@ -38,7 +38,7 @@ strong{
     font-weight:500;
 }
 
-.gallery {
+.gallery { /* montse */
     width: 400px;
     padding-right: 500px;
 }
@@ -68,16 +68,17 @@ strong{
 }
 
 .gallery-next {
-    right: 500px;
+    right: 10px;
 }
 
 
-.product-title {
+.product-title { /* montse */
 
     background: #0b56b7;
     color: white;
+    margin-top: 25px;
     padding-top: 1px;
-padding-bottom: 0.1px;
+    padding-bottom: 0.1px;
     margin-left: 20px;
 
     font-family: "Montserrat";
@@ -88,17 +89,20 @@ padding-bottom: 0.1px;
     box-shadow: 1px 1px 2px black;
 }
 
+.product-title h2 {
+margin-left: 25px;
+}
 
 .arrow:hover {
     background: rgba(0,0,0,0.8);
 }
 
-header{
+header{ /* montse */
     display:flex;
     align-items:center;
     justify-content:space-between;
 }
-.image-gallery {
+.image-gallery { /* montse */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -111,7 +115,7 @@ header{
 }
 
 
-.arrow {
+.arrow { /* montse */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -136,14 +140,14 @@ header{
 }
 
 .next {
-    right: 30px;
+    right: 0px;
 }
 
-.arrow:hover {
+.arrow:hover { /* montse */
     background: #05316b;
 }
 
-.lang {
+.lang { /* montse */
     font-size: 15px;
     width: 70px;
     height: 40px;
@@ -167,7 +171,7 @@ header{
 }
 
 
-.lang .fa-globe {
+.lang .fa-globe { /* montse */
     font-size: 18px;
     margin: 0;
 }
@@ -175,6 +179,7 @@ header{
 
 .contáctanos button { /* montse */
     margin-top: 20px;
+    margin-left: 40px;
     background: #0b56b7 !important;
     color: white !important;
     height: 50px;
