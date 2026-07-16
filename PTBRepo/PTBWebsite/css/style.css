@@ -168,7 +168,7 @@ header{ /* montse */
 
 .contáctanos button { /* montse */
     margin-top: 20px;
-    margin-left: 40px;
+    margin-left: 0px;
     background: #0b56b7 !important;
     color: white !important;
     height: 50px;
@@ -337,7 +337,7 @@ main{
 }
 
 .instagram{
-    width: 400px;
+    width: 500px;
     padding-right: 40px;
     text-align: center;
 }
@@ -351,7 +351,6 @@ main{
 .instagram-title h2{
     background: #0b56b7;
     color: white;
-
     padding: 12px 10px;
 
     font-family: "Montserrat";
@@ -361,6 +360,7 @@ main{
     text-shadow: 1px 1px 2px black;
     box-shadow: 1px 1px 2px black;
 
+    transition: background .2s ease, transform .2s ease;
 }
 
 .instagram img{
@@ -590,4 +590,15 @@ nav a:hover{
 .map-link:hover{
     color:#d8e9ff;
     text-decoration:underline;
+}
+
+.email-link{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.email-link:hover{
+    color: #d8e9ff;
+    text-decoration: underline;
 }
