@@ -511,11 +511,11 @@ main{
     font-family: "Montserrat";
 }
 
-a{
+nav a{
     color:#111;
 }
 
-a:hover{
+nav a:hover{
     color:#0b56b7;
 }
 
@@ -582,12 +582,12 @@ a:hover{
 }
 
 .map-link{
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
 }
 
 .map-link:hover{
-    text-decoration: underline;
-    color: #d8e9ff;
+    color:#d8e9ff;
+    text-decoration:underline;
 }
