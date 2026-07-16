@@ -200,6 +200,20 @@ header{ /* montse */
     margin-top: 10px;
 }
 
+.skibidi img {
+    width: 100px;
+    margin-left: 15px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.skibidi2 img {
+    width: 100px;
+    margin-left: 15px;
+    padding-left: 1400px;
+}
+
+
 nav ul {
     display: flex;
     list-style: none;
