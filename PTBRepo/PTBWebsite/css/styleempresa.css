@@ -200,12 +200,15 @@ header{ /* montse */
     margin-top: 10px;
 }
 
-.skibidi img{
+.skibidi{
     float: right;
-    width: 400px;
-    margin: 0 0 20px 50px;
+    margin: 0 0 25px 50px;
 }
 
+.skibidi img{
+    width: 400px;
+    display: block;
+}
 
 nav ul {
     display: flex;
@@ -256,7 +259,7 @@ nav a:hover::after {
 
 main{
     margin-top: 20px;
-    display: flex;
+    display: block;
     justify-content: space-between;
     gap: 10px;
 }
