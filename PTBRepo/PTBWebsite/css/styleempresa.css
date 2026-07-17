@@ -625,6 +625,7 @@ nav a:hover{
     padding: 10px;
     box-shadow: 1px 1px 2px black;
     font-family: "Montserrat";
+    margin-bottom: 1px;
 }
 
 .sobre-title {
@@ -633,7 +634,9 @@ nav a:hover{
 
 .sobre-p {
     margin-left: 60px;
+    margin-right: 60px;
     font-family: "Montserrat";
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
+    text-align: justify;
     }
