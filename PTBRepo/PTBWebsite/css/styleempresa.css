@@ -481,6 +481,19 @@ main{
     margin: 0 0 12px 0;
 }
 
+#blanket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b56b7;
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
 .indent{
     display: inline-block;
     margin-left: 45px;
@@ -634,6 +647,18 @@ nav a:hover{
     margin-bottom: 1px;
 }
 
+.PorQueTitle h2 {
+    display: inline-block;
+    background: #0b56b7;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 2px black;
+    font-family: "Montserrat";
+    margin-left: 1100px;
+    margin-bottom: 1px;
+}
+
 .sobre-title {
     margin-left: 60px;
 }
@@ -647,3 +672,21 @@ nav a:hover{
     text-align: justify;
     margin-bottom: 40px;
     }
+
+    
+.PorQue-p {
+    margin-left: 1100px;
+    margin-right: 60px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 0px;
+ }
+
+
+.PorImg Img {
+width: 300px;
+height: 200px;
+    transform: translateY(-80px); 
+ }
