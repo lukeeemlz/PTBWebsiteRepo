@@ -675,18 +675,18 @@ nav a:hover{
 
     
 .PorQue-p {
-    margin-left: 1100px;
+    margin-left: 60px;
     margin-right: 60px;
     font-family: "Montserrat";
     font-weight: 400;
     font-size: 20px;
     text-align: justify;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
  }
 
 
 .PorImg Img {
-width: 300px;
-height: 200px;
-    transform: translateY(-80px); 
+ float: left;
+width: 400px;
+display: block;
  }
