@@ -64,6 +64,7 @@ strong { /* montse */
   }
 
   .gallery-window {
+    margin-top: 200px;
     cursor: pointer;
 }
 
@@ -114,6 +115,8 @@ header{ /* montse */
 
 .gallery{
     display:flex;
+    height: auto;
+    width: auto;
     align-items:center;
     gap:20px;
 }
@@ -172,14 +175,14 @@ header{ /* montse */
 
 .gallery-window{
     width:800px;
-    height:400px;
-    overflow:hidden;
+height: 400px;   
+ overflow:hidden;
     border-radius:40px;
 }
 
 .gallery-track img{
     width:400px;
-    height:400px;
+    height: auto;   
     object-fit:cover;
     flex-shrink:0;
 }
@@ -409,29 +412,40 @@ main{
 }
 
 .instagram-title{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2%;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+
+        transform: translateX(-470px); 
+
+
+    background: #0b56b7;
+    box-shadow: 1px 1px 2px black;
 }
 
 .instagram-title h2{
-    background: #0b56b7;
+    margin: 0;
+    padding: 20px 0;
+
     color: white;
-    padding: 12px 10px;
+    text-align: center;
 
     font-family: "Montserrat";
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 700;
 
-    text-shadow: 1px 1px 2px black;
-    box-shadow: 1px 1px 2px black;
 
-    transition: background .2s ease, transform .2s ease;
+    text-shadow: 1px 1px 2px black;
 }
 
 .instagram img{
     width: 100%;
-    margin-bottom: 18px;
+    margin-bottom: 10px;
+}
+
+.elfsight-app-44ab69ae-b81b-4063-9080-29bfb04c8922 {
+    margin-top: 40px;
 }
 
 .instagram p{

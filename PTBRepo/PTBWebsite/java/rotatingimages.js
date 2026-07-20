@@ -1,34 +1,78 @@
-const images = [
-    "/images/anagramapng.png",
-    "/images/cajapng.png",
-    "/images/carcasapng.png",
-    "/images/conectorespng.png"
-];
+const track = document.querySelector(".gallery-track");
+const next = document.querySelector(".gallery-btn.next");
+const prev = document.querySelector(".gallery-btn.prev");
 
-let current = 0;
+let slides = Array.from(track.children);
+const slideWidth = slides[0].offsetWidth;
 
-const image = document.getElementById("gallery-image");
+const firstClone = slides[0].cloneNode(true);
+const secondClone = slides[1].cloneNode(true);
 
-function showImage() {
-    image.src = images[current];
-}
+const lastClone = slides[slides.length - 1].cloneNode(true);
+const secondLastClone = slides[slides.length - 2].cloneNode(true);
 
-document.querySelector(".gallery-next").addEventListener("click", () => {
-    current++;
+// Add clones
+track.appendChild(firstClone);
+track.appendChild(secondClone);
 
-    if (current >= images.length) {
-        current = 0;
-    }
+track.insertBefore(secondLastClone, slides[0]);
+track.insertBefore(lastClone, slides[0]);
 
-    showImage();
+// Refresh slide list
+slides = Array.from(track.children);
+
+let index = 2;
+
+track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+next.addEventListener("click", () => {
+
+    if (index >= slides.length - 2) return;
+
+    index++;
+
+    track.style.transition = "transform .5s ease";
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
 });
 
-document.querySelector(".gallery-prev").addEventListener("click", () => {
-    current--;
+prev.addEventListener("click", () => {
 
-    if (current < 0) {
-        current = images.length - 1;
+    if (index <= 0) return;
+
+    index--;
+
+    track.style.transition = "transform .5s ease";
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+});
+
+track.addEventListener("transitionend", () => {
+
+    if (index === slides.length - 2) {
+
+        track.style.transition = "none";
+
+        index = 2;
+
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+
     }
 
-    showImage();
+    if (index === 1) {
+
+        track.style.transition = "none";
+
+        index = slides.length - 5;
+
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    }
+
+});
+
+const gallery = document.querySelector(".gallery-window");
+
+gallery.addEventListener("click", () => {
+    window.location.href = "../html/productos.html";
 });
