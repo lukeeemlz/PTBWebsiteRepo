@@ -654,13 +654,23 @@ margin-top: 40px;
 }
 
 .TrajabosImages2 {
-margin-top: 80px;
+margin-top: 40px;
  display: flex;
   flex-direction: row;
   flex-wrap: nowrap; 
-  gap: 10px;
+  gap: 90px;
   overflow-x: auto;
 }
+
+.TrajabosImages3 {
+margin-top: 40px;
+ display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  gap: 90px;
+  overflow-x: auto;
+}
+
 
 .TrajabosImage {
 flex: 0 0 300px;   

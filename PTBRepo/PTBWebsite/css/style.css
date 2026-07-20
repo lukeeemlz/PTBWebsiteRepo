@@ -43,6 +43,9 @@ strong { /* montse */
     padding-right: 500px;
 }
 
+.instagram-widget {
+    margin-top: 30px;
+}
 .gallery img {
     width: 100%;
     height: auto;
@@ -445,7 +448,7 @@ main{
 }
 
 .elfsight-app-44ab69ae-b81b-4063-9080-29bfb04c8922 {
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .instagram p{
@@ -460,12 +463,11 @@ main{
 
 .contáctanos{
     background-image: url("/images/ptbblueoverlaycrop.png");
-    margin-top: 50px;
     display:flex;
     justify-content:flex-start;
     align-items:flex-start;
-    gap:0px;
 }
+
 
 .left{
   width: 30%;
@@ -539,6 +541,19 @@ main{
 .info p {
     font-size: 18px;
     margin: 0 0 12px 0;
+}
+
+#blanket {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0b56b7;
+  z-index: 99999;
+  opacity: 1;
+  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
 }
 
 .indent{

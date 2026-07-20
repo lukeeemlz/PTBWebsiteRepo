@@ -218,6 +218,8 @@ header{ /* montse */
 .skibidi img{
     width: 400px;
     display: block;
+    transform: translateY(-100px) translateX(30px);
+
 }
 
 nav ul {
@@ -697,12 +699,17 @@ nav a:hover{
     font-family: "Montserrat";
     font-weight: 400;
     font-size: 20px;
-    width: 900px;
+    text-align: justify;
+}
+
+.valo-p {
+    text-align: justify;
 }
 
 .valo-p p,
-.valo-p li{
+.valo-p li {
     text-align: justify;
+    text-justify: inter-word; /* mejora el justificado en algunos navegadores */
 }
 
     
