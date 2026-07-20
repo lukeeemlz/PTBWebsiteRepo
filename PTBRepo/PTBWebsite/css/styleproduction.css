@@ -358,7 +358,7 @@ main{
 
 .instagram{
     width: 500px;
-    padding-right: 40px;
+    margin-right: 40px;
     text-align: center;
 }
 
@@ -374,6 +374,10 @@ main{
     font-weight: 400;
     margin-left: 60px;
 
+}
+
+.IntroText p {
+    justify-content:space-between;
 }
 
 .instagram-title h2{
@@ -651,9 +655,12 @@ margin-top: 40px;
   flex-wrap: nowrap; 
   gap: 90px;
   overflow-x: auto;
+  margin-left: 20px;
+
 }
 
 .TrajabosImages2 {
+    margin-left: 20px;
 margin-top: 40px;
  display: flex;
   flex-direction: row;
@@ -669,6 +676,8 @@ margin-top: 40px;
   flex-wrap: nowrap; 
   gap: 90px;
   overflow-x: auto;
+  margin-left: 20px;
+
 }
 
 
@@ -692,7 +701,6 @@ margin-left: 30px;
 .TrajabosImage Img {
 width: 100%;        /* Makes the image scale nicely inside its card card */
 height: auto;
-margin-left: 30px;
 }
 
 .Nues-title h2 {
@@ -706,16 +714,23 @@ margin-left: 30px;
     margin-bottom: 1px;
 }
 
-.TrabajosText h2 {
-    display: inline-block;
+.TrabajosText {
+    width: 100%;
     background: #0b56b7;
-    font-size: 30px;
-    margin-left: 60px;
-    color: white;
-    padding: 10px;
     box-shadow: 1px 1px 2px black;
-    font-family: "Montserrat";
     margin-bottom: 1px;
+}
+
+.TrabajosText h2 {
+    margin: 0;
+    padding: 20px 0;
+
+    color: white;
+    text-align: center;
+
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 700;
 }
 
 .PorQueTitle h2 {
@@ -736,13 +751,17 @@ margin-left: 30px;
 
 .nues-p {
     margin-left: 60px;
-    font-family: "Montserrat";
-    font-weight: 400;
-    font-size: 16x;
-    text-align: justify;
     margin-bottom: 40px;
-    }
+}
 
+.nues-p p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 0;
+}
     
 .PorQue-p {
     margin-left: 1100px;
