@@ -368,12 +368,13 @@ main{
     margin-bottom: 2%;
 }
 
-.IntroText h2 {
+.IntroText p {
     font-family: "Montserrat";
     font-size: 20px;
     font-weight: 400;
     margin-left: 60px;
-
+    margin-right: 50px;
+    text-align: justify;
 }
 
 .IntroText p {
@@ -648,59 +649,38 @@ nav a:hover{
     text-decoration: underline;
 }
 
-.TrajabosImages {
-margin-top: 40px;
- display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; 
-  gap: 90px;
-  overflow-x: auto;
-  margin-left: 20px;
-
-}
-
-.TrajabosImages2 {
-    margin-left: 20px;
-margin-top: 40px;
- display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; 
-  gap: 90px;
-  overflow-x: auto;
-}
-
+.TrajabosImages,
+.TrajabosImages2,
 .TrajabosImages3 {
-margin-top: 40px;
- display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap; 
-  gap: 90px;
-  overflow-x: auto;
-  margin-left: 20px;
-
-}
-
-
-.TrajabosImage {
-flex: 0 0 300px;   
-text-align: center;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 40px;          /* Ajusta este valor si quieres más o menos separación */
+    padding: 0 60px;    /* 60px izquierda y derecha */
+    box-sizing: border-box;
 }
 
 .TrajabosImage h3 {
-font-family: "Montserrat";
-font-weight: 700;
-margin-left: 30px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-left: 0;
+    text-align: center;
 }
 
 .TrajabosImage p {
-font-family: "Montserrat";
-font-weight: 400;
-margin-left: 30px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    margin-left: 0;
+    text-align: center;
 }
 
-.TrajabosImage Img {
-width: 100%;        /* Makes the image scale nicely inside its card card */
-height: auto;
+.TrajabosImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 .Nues-title h2 {
@@ -751,14 +731,15 @@ height: auto;
 
 .nues-p {
     margin-left: 60px;
+    margin-right: 50px;
     margin-bottom: 40px;
+    margin-top: 25px;
 }
 
 .nues-p p {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Montserrat";
+    font-size: 20px;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.6;
     text-align: justify;
     margin: 0;
 }

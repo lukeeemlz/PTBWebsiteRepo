@@ -2,7 +2,6 @@ html,
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: "Source Sans 3";
 }
 
@@ -17,7 +16,7 @@ body {
 
 nav a,
 .producto h3,
-.instagram-title,
+.instagram h2,
 .Producto1Class,
 .contáctanos button,
 .instagram p,
@@ -41,15 +40,9 @@ strong { /* montse */
 
 .gallery { /* montse */
     width: 400px;
-    padding-right: 600px;
+    padding-right: 500px;
 }
 
-.instagram-widget {
-    margin-top: 30px;
-    height: 600px;
-    width: 600px;
-    transform: translateX(-120px);
-}
 .gallery img {
     width: 100%;
     height: auto;
@@ -69,11 +62,6 @@ strong { /* montse */
     font-size: 24px;
     cursor: pointer;
   }
-
-  .gallery-window {
-    margin-top: 200px;
-    cursor: pointer;
-}
 
 .gallery-prev {
     left: 10px;
@@ -122,10 +110,7 @@ header{ /* montse */
 
 .gallery{
     display:flex;
-    height: auto;
-    width: auto;
     align-items:center;
-    transform: translateX(-30px);
     gap:20px;
 }
 
@@ -174,55 +159,11 @@ header{ /* montse */
     padding: 0; 
 }
 
-.mini-gallery-wrap{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    margin-left: 10px;
-}
-
-.gallery-window{
-    width:800px;
-height: 400px;   
- overflow:hidden;
-    border-radius:40px;
-}
-
-.gallery-track img{
-    width:400px;
-    height: auto;   
-    object-fit:cover;
-    flex-shrink:0;
-}
-
-.gallery-track{
-    display:flex;
-    transition:.5s;
-}
-
-.gallery-btn{
-    width:34px;
-    height:34px;
-    border:none;
-    border-radius:50%;
-    background:rgba(0,0,0,.8);
-    color:white;
-    cursor:pointer;
-    flex-shrink:0;
-    font-size:18px;
-}
-
-.gallery-btn:hover{
-    background:rgba(0,0,0,.9);
-}
-
 
 .lang .fa-globe { /* montse */
     font-size: 18px;
     margin: 0;
 }
-
-
 
 
 .contáctanos button { /* montse */
@@ -244,24 +185,6 @@ height: 400px;
     cursor: pointer;
 }
 
-#blanket {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #0b56b7;
-  z-index: 99999;
-  opacity: 1;
-  transition: opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity;
-}
-
-#blanket.shutter-open {
-  opacity: 0;
-  pointer-events: none;
-}
-
 .email{
     margin-top: 15px;
 }
@@ -276,6 +199,47 @@ height: 400px;
     padding-left: 30px;
     margin-top: 10px;
 }
+
+.skibidi{
+    float: right;
+    margin: 25px 50px;
+}
+
+.skbidi p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+    }
+
+.Calidad {
+padding-bottom: 30px;
+    }
+
+
+
+
+
+.EquipmentImg img{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    margin-top: 160px;
+}
+
+.CalidadImg img{
+    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    margin-top: 580px;
+}
+
+
 
 nav ul {
     display: flex;
@@ -326,13 +290,17 @@ nav a:hover::after {
 
 main{
     margin-top: 20px;
-    display: flex;
+    display: block;
     justify-content: space-between;
-    gap: 10px;
+    gap: 200px;
 }
 
+.Calidad{
+margin-top: 150px;
+}
+
+
 .productos{
-    padding-left: 50px;
     display: flex;
     gap: 30px;
 } 
@@ -419,40 +387,30 @@ main{
     text-align: center;
 }
 
-.instagram-section {
-    width: 500px; /* same width as your Instagram column */
+.instagram-title{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
 }
 
-.instagram {
-    width: 100%;
-    padding-right: 40px;
-}
-
-.instagram-title {
-    position: relative;
-    width: 100vw;
-
-    left: 50%;
-    margin-left: -83vw;
-
+.instagram-title h2{
     background: #0b56b7;
-    box-shadow: 1px 1px 2px black;
-}
-
-.instagram-title h2 {
-    margin: 0;
-    padding: 20px 0;
     color: white;
-    text-align: center;
+    padding: 12px 10px;
+
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black;
+
+    transition: background .2s ease, transform .2s ease;
 }
 
 .instagram img{
     width: 100%;
-    margin-bottom: 10px;
-}
-
-.elfsight-app-44ab69ae-b81b-4063-9080-29bfb04c8922 {
-    margin-top: 45px;
+    margin-bottom: 18px;
 }
 
 .instagram p{
@@ -467,11 +425,12 @@ main{
 
 .contáctanos{
     background-image: url("/images/ptbblueoverlaycrop.png");
+    margin-top: 50px;
     display:flex;
     justify-content:flex-start;
     align-items:flex-start;
+    gap:0px;
 }
-
 
 .left{
   width: 30%;
@@ -701,3 +660,119 @@ nav a:hover{
     color: #d8e9ff;
     text-decoration: underline;
 }
+
+.equipmenttitle h2 {
+    display: inline-block;
+    background: #0b56b7;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 2px black;
+    font-family: "Montserrat";
+    margin-bottom: 1px;
+    margin-left: 50px;
+}
+
+.CalidadTitle h2 {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    background: hsl(214, 89%, 38%);
+    font-size: 30px;
+    color: white;
+    padding: 12px;
+    line-height: 1;      /* Add this */
+    margin: 0;           /* Add this */
+
+    box-shadow: 1px 1px 2px black;
+    font-family: "Montserrat";
+
+    margin-left: 400px;
+    margin-top: -70px;
+
+    transform: translateY(-55px);
+}
+
+
+.valo-title h2 {
+    display: inline-block;
+    background: #0b56b7;
+    font-size: 30px;
+    color: white;
+    padding: 10px;
+    box-shadow: 1px 1px 2px black;
+    font-family: "Montserrat";
+    margin-bottom: 1px;
+}
+
+.equipment-title {
+    margin-left: 60px;
+}
+
+.equipment-p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 10px;
+    width: 63%;
+    }
+
+    
+    .calidad-p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 410px;
+    transform: translateY(-50px);
+    text-align: justify;
+}
+
+.valo-title {
+    margin-left: 60px;
+}
+
+.valo {
+    text-align: justify;
+}
+
+.valo-p{
+    margin: 0 60px 40px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.valo-p {
+    text-align: justify;
+}
+
+.valo-p p,
+.valo-p li {
+    text-align: justify;
+    text-justify: inter-word; /* mejora el justificado en algunos navegadores */
+}
+
+    
+.PorQue-p {
+    margin-left: 60px;
+    margin-right: 60px;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 20px;
+    text-align: justify;
+    margin-bottom: 40px;
+ }
+
+
+.PorImg Img {
+ float: left;
+width: 400px;
+display: block;
+ }
