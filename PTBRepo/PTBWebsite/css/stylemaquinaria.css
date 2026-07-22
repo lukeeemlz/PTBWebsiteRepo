@@ -702,6 +702,7 @@ nav a:hover{
     margin-left: 120px;
 }
 
+
 .Nues-title p {
     text-align: justify;
     width: 45%;
@@ -710,9 +711,9 @@ nav a:hover{
 
 .fabricatitle {
     width: 500px;          
-    margin-left: auto;     
+    margin-left: auto;  
     margin-right: 60px;
-    transform: translateY(-120px); 
+    transform: translateY(-150px); 
 
 }
 
@@ -730,6 +731,9 @@ nav a:hover{
     font-family: "Montserrat";
     margin-bottom: 1px;
     margin-left: 120px;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateY(-20px) translateX(-110px)
 }
 
 .fabricatitle p {
@@ -796,6 +800,7 @@ nav a:hover{
     gap: 0px;
     margin-left: 20px;
     margin-top: 0px;
+    transform: translateY(-200px);
 }
 
 .mini-gallery-wrap2 {
