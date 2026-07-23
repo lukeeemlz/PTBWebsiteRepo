@@ -121,9 +121,56 @@ header{ /* montse */
 }
 
 .IntroText {
+margin-left: 50px;
+margin-right: 50px;
+text-justify: auto;
+text-align: center;
+}
+
+.IntroText h2 {
 font-family: "Montserrat";
 font-weight: 400;
 font-size: 20px;
+}
+
+
+
+.TrajabosImages,
+.TrajabosImages2,
+.TrajabosImages3 {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 40px;          /* Ajusta este valor si quieres más o menos separación */
+    padding: 0 60px;    /* 60px izquierda y derecha */
+    box-sizing: border-box;
+}
+
+.TrajabosImages3 {
+margin-bottom: 20px;
+}
+
+.TrajabosImage h3 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    margin-left: 0;
+    text-align: center;
+}
+
+.TrajabosImage p {
+    font-family: "Montserrat";
+    font-weight: 400;
+    margin-left: 0;
+    text-align: center;
+}
+
+.TrajabosImage img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 
@@ -227,11 +274,11 @@ nav a:hover::after {
     padding-top: 10px;
 }
 
-main{
-      margin-top: 20px;
+main {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .header-right {
@@ -514,4 +561,21 @@ nav a:hover{
 .email-link:hover{
     color: #d8e9ff;
     text-decoration: underline;
+}
+
+.TrabajosText {
+    width: 100%;
+    background: #0b56b7;
+    box-shadow: 1px 1px 2px black;
+    margin-bottom: 1px;
+}
+
+.TrabajosText h2 {
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 30px;
+    font-weight: 700;
 }
