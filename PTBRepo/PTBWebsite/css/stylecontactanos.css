@@ -136,26 +136,6 @@ header{ /* montse */
     box-shadow: 1px 1px 2px black;
 }
 
-.contáctanos button {
-    margin-top: 20px;
-    margin-left: 0px;
-    background: #0b56b7 !important;
-    color: white !important;
-    height: 50px;
-    width: 225px;
-    font-size: 25px;
-    appearance: none;
-    margin-left: 333px;
-    -webkit-appearance: none;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px black;
-
-    border: none;
-    box-shadow: 1px 1px 2px black;
-    outline: none;
-    cursor: pointer;
-}
-
 #blanket {
   position: fixed;
   top: 0;
@@ -297,7 +277,7 @@ main {
     width: 700px;
     background: white;
     padding: 25px; 
-    padding-left: 70px;
+    padding-left: 50px;
     border-radius: 12px;
 
     display: flex;
@@ -354,4 +334,198 @@ main {
     border-width: 3px;
     border-color: #0b56b7;
     outline: none;
+}
+
+.contact-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 120px;
+    margin-left: 70px;
+    margin-top: 30px;
+}
+
+
+.form-section {
+    width: 700px;
+}
+
+
+.form-section h2 {
+    background: #0b56b7;
+    color: white;
+    padding: 12px;
+    width: 675px;
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 50px;
+
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black;
+}
+
+
+.contact-content {
+    margin-top: 0px;
+    margin-left: -50px;
+    width: 550px;
+}
+
+
+.send-button {
+    display: block;
+    margin-left: 644px;
+    margin-top: 15px;
+
+    width: 125px;
+    height: 50px;
+
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+
+    background: #0b56b7;
+    color: white;
+
+    border: none;
+    cursor: pointer;
+
+    text-shadow: 1px 1px 2px black;
+    box-shadow: 1px 1px 2px black;
+}
+
+.contact-content,
+.contact-content a,
+.contact-content span,
+.contact-content strong {
+    color: #0056b3;
+}
+
+.email-link {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.contact-content {
+    width: 600px;
+    margin-left: -50px;
+}
+
+
+.contact-content p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 20px;
+
+    margin: 0 0 10px 0;
+}
+
+
+/* alineación teléfonos */
+.info > p:first-child i {
+    width: 45px;
+    text-align: center;
+}
+
+.phone-space {
+    display: block;
+    width: 45px;
+    flex-shrink: 0;
+}
+
+.label,
+.indent {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+
+.contact-content i {
+    font-size: 32px;
+    color: #0056b3;
+    text-align: center;
+    padding-top: 3px;
+}
+
+
+.contact-content .label,
+.contact-content strong {
+    width: 90px;
+    flex-shrink: 0;
+    color: #0056b3;
+    font-family: "Montserrat";
+    font-weight: 700;
+}
+
+
+.contact-content span,
+.contact-content a {
+    color: #0056b3;
+}
+
+
+.email {
+    margin-top: 20px;
+}
+
+
+.middle {
+    margin-top: 20px;
+}
+
+
+/* direcciones */
+.middle p {
+    grid-template-columns: 45px 110px auto;
+}
+
+
+.map-link {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+
+.email-link {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.phone-space {
+    display: block;
+    width: 45px;
+}
+
+.icon-space {
+    display: block;
+    width: 45px;
+    flex-shrink: 0;
+}
+
+/* evita que FÁBRICA se pegue */
+.indent,
+.indentfab {
+    width: auto;
+}
+
+.middle p {
+    display: flex;
+    align-items: flex-start;
+}
+
+.middle strong {
+    width: 90px;
+    flex-shrink: 0;
+}
+
+.middle .map-link {
+    flex: 1;
 }
