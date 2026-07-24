@@ -1,28 +1,25 @@
-document.querySelectorAll(".mini-gallery-wrap, .mini-gallery-wrap2").forEach(wrapper => {
+const wrappers = document.querySelectorAll(".mini-gallery-wrap, .mini-gallery-wrap2");
+
+wrappers.forEach(wrapper => {
 
     const track = wrapper.querySelector(".gallery-track");
+    const gallery = wrapper.querySelector(".gallery-window");
     const next = wrapper.querySelector(".next");
     const prev = wrapper.querySelector(".prev");
-    const gallery = wrapper.querySelector(".gallery-window");
 
-    const link = gallery.getAttribute("data-link");
-
-    console.log(link); // should show taller.html / fabrica.html
+    const link = gallery.dataset.link;
 
     let slides = Array.from(track.children);
+    const originalCount = slides.length;
     const slideWidth = gallery.clientWidth;
 
-    const firstClone = slides[0].cloneNode(true);
-    const secondClone = slides[1].cloneNode(true);
+    // Clone first 2
+    track.appendChild(slides[0].cloneNode(true));
+    track.appendChild(slides[1].cloneNode(true));
 
-    const lastClone = slides[slides.length - 1].cloneNode(true);
-    const secondLastClone = slides[slides.length - 2].cloneNode(true);
-
-    track.append(firstClone);
-    track.append(secondClone);
-
-    track.prepend(lastClone);
-    track.prepend(secondLastClone);
+    // Clone last 2
+    track.insertBefore(slides[originalCount - 2].cloneNode(true), track.firstChild);
+    track.insertBefore(slides[originalCount - 1].cloneNode(true), track.firstChild);
 
     slides = Array.from(track.children);
 
@@ -30,57 +27,55 @@ document.querySelectorAll(".mini-gallery-wrap, .mini-gallery-wrap2").forEach(wra
 
     track.style.transform = `translateX(-${index * slideWidth}px)`;
 
+    function move() {
+        track.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
 
     next.addEventListener("click", () => {
+        if (track.style.transition === "none") {
+            track.style.transition = "transform .5s ease";
+        }
 
         index++;
-
-        track.style.transition = "transform .5s ease";
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
-
+        move();
     });
-
 
     prev.addEventListener("click", () => {
+        if (track.style.transition === "none") {
+            track.style.transition = "transform .5s ease";
+        }
 
         index--;
-
-        track.style.transition = "transform .5s ease";
-        track.style.transform = `translateX(-${index * slideWidth}px)`;
-
+        move();
     });
-
 
     track.addEventListener("transitionend", () => {
 
-        if (index === slides.length - 2) {
-
+        // Passed the last real slide
+        if (index >= originalCount + 2) {
             track.style.transition = "none";
-
             index = 2;
+            move();
 
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-
+            // force reflow
+            track.offsetHeight;
+            track.style.transition = "transform .5s ease";
         }
 
-
-        if (index === 1) {
-
+        // Passed the first real slide
+        if (index <= 1) {
             track.style.transition = "none";
+            index = originalCount + 1;
+            move();
 
-            index = slides.length - 5;
-
-            track.style.transform = `translateX(-${index * slideWidth}px)`;
-
+            track.offsetHeight;
+            track.style.transition = "transform .5s ease";
         }
 
     });
 
-
     gallery.addEventListener("click", () => {
-
         window.location.href = link;
-
     });
 
 });
