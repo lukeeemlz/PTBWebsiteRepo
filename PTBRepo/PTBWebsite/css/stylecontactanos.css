@@ -124,7 +124,7 @@ header{ /* montse */
     background: #0b56b7;
     color: white;
     padding: 12px 12px;
-    width: 675px;
+    width: 550px;
     margin-left: 70px;
     text-align: center;
 
@@ -274,7 +274,7 @@ main {
 }
 
 .contact-form {
-    width: 700px;
+    width: 550px;
     background: white;
     padding: 25px; 
     padding-left: 50px;
@@ -340,13 +340,13 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 120px;
-    margin-left: 70px;
+    margin-left: 20px;
     margin-top: 30px;
 }
 
 
 .form-section {
-    width: 700px;
+    width: 550px;
 }
 
 
@@ -354,7 +354,7 @@ main {
     background: #0b56b7;
     color: white;
     padding: 12px;
-    width: 675px;
+    width: 525px;
     margin: 0;
 
     text-align: center;
@@ -373,12 +373,15 @@ main {
     margin-top: 0px;
     margin-left: -50px;
     width: 550px;
+    display: flex;
+    flex-direction: column;
 }
+
 
 
 .send-button {
     display: block;
-    margin-left: 644px;
+    margin-left: 470px;
     margin-top: 15px;
 
     width: 125px;
@@ -455,6 +458,15 @@ main {
     padding-top: 3px;
 }
 
+.info  {
+    margin-right: 30px;
+}
+
+.contact-content {
+    margin-left: 20px; /* Increase or decrease */
+}
+
+
 
 .contact-content .label,
 .contact-content strong {
@@ -513,7 +525,7 @@ main {
 /* evita que FÁBRICA se pegue */
 .indent,
 .indentfab {
-    width: auto;
+    width: 30px;
 }
 
 .middle p {
@@ -528,4 +540,196 @@ main {
 
 .middle .map-link {
     flex: 1;
+}
+
+.contact-info .info i,
+.phone-space,
+.icon-space {
+    width: 32px;
+    min-width: 32px;
+    text-align: center;
+}
+
+.label,
+.indent {
+    display: inline-block;
+    flex: 0 0 100px;   /* fixed width */
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contact-info .info > p:first-child span:last-child {
+    position: relative;
+    right: 43px;   /* try 2px, 3px or 4px */
+}
+
+.contact-info .info > p:first-child {
+    margin-left: 8px; /* adjust: 4px, 6px, 10px... */
+}
+
+.contact-info .info > p:nth-child(2) span:last-child {
+    margin-left: -20px; /* Try -4px, -6px or -8px */
+}
+
+.contact-info .info > p:nth-child(3) span:last-child {
+    margin-left: -5px;   /* Adjust: 4px, 6px, 8px... */
+}
+
+.middle > p:first-child .map-link {
+    margin-left: -15px; /* adjust: -4px, -6px, -10px */
+}
+
+.contact-info .email > p:first-child .email-link {
+    margin-left: -14px; /* Try -4px, -6px or -8px */
+}
+
+.contact-info .info > p:first-child i {
+    position: relative;
+    right: 15px;   /* moves the icon to the right */
+}
+
+
+.middle > p:first-child i {
+    position: relative;
+    top: -9px;
+}
+
+.email-link {
+    margin: 0;
+    padding: 0;
+    color: #004b93;
+    text-decoration: none;
+}
+
+.email-link {
+    text-decoration: none;
+    color: #004b93;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+.mobile-label {
+    position: relative;
+    left: -13px; /* adjust: -3px, -5px, -8px... */
+}
+.middle p {
+    display: flex;
+    align-items: flex-start;
+    margin: 14px 0;
+}
+
+.middle i,
+.middle .icon-space {
+    width: 30px;
+    flex-shrink: 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.middle strong,
+.middle .indentfab {
+    width: 100px;
+    flex-shrink: 0;
+    font-weight: 700;
+    color: #004b93;
+}
+
+.map-link {
+    color: #004b93;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.map-link {
+    flex: 1;
+    min-width: 400px;
+}
+.contact-info .info i,
+.phone-space,
+.icon-space,
+.middle i {
+    width: 40px; /* was 30px or 32px */
+    text-align: center;
+}
+
+.map-link span {
+    display: block;
+    margin: 0;
+}
+
+.ProyectoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 110px;
+}
+
+.project-divider {
+    width: 70%;
+    margin: 20px auto 0;
+    border: none;
+    border-top: 3px solid #0056b3;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #007BFF;
+    border-radius: 10px;
+    font-family: "Montserrat";
+    font-size: 16px;
+    box-sizing: border-box;
+    background: white;
+    color: #333;
+}
+
+.contact-form select:focus {
+    border-width: 3px;
+    border-color: #0b56b7;
+    outline: none;
+}
+
+.ProyectoTitle h2 {
+    margin: 0;
+    padding: 12px;
+    background: white;
+    color: #0056b3;
+
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ProyectoTitle p {
+    margin: 0;
+    padding: 12px;
+    background: white;
+    color: #0056b3;
+
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.ptbmap iframe {
+    height: 200px;
+    width: 600px;
+}
+
+.gaussmap iframe {
+    height: 200px;
+    width: 600px;
+
 }
