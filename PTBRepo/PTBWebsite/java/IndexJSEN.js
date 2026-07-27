@@ -10,7 +10,7 @@ function makeLogoClickable() {
 
 
         logo.addEventListener("click", function () {
-            window.location.href = "/index.html";
+            window.location.href = "/PTBRepo/PTBWebsite/html/EN/IndexEN.html";
         });
     } else {
         setTimeout(makeLogoClickable, 300);
