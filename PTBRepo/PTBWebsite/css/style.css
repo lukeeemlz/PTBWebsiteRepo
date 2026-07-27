@@ -118,28 +118,6 @@ header{ /* montse */
     background: #05316b;
 }
 
-.lang { /* montse */
-    font-size: 15px;
-    width: 70px;
-    height: 40px;
-    background: #0b56b7;
-    color: rgb(239, 235, 235);
-    margin-right: 20px;
-    margin-top: 150x;
-    text-shadow: 1px 1px 2px black;
-    border: none;
-    box-shadow: 1px 1px 2px black;
-    outline: none;
-
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-
-    padding: 0; 
-}
 
 .dropdown {
     position: relative;
@@ -189,6 +167,12 @@ header{ /* montse */
 .dropdown-content a:hover {
     background: #f2f2f2;
     color: #0b56b7;
+    text-shadow: none !important;
+}
+
+.lang-menu,
+.lang-menu * {
+    text-shadow: none !important;
 }
 
 .mini-gallery-wrap{
@@ -197,6 +181,38 @@ header{ /* montse */
     gap: 0px;
     margin-left: 40px;
     margin-top: 100px;
+}
+
+.lang { /* montse */
+    font-size: 15px;
+    width: 70px;
+    height: 40px;
+    background: #0b56b7;
+    color: rgb(239, 235, 235);
+    margin-right: 20px;
+    margin-top: 150x;
+    border: none;
+    box-shadow: 1px 1px 2px black;
+    outline: none;
+
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    padding: 0; 
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: inherit;
+    text-shadow: 1px 1px 2px black;
+
 }
 
 .gallery-btn.prev{
@@ -439,8 +455,15 @@ main{
     color: #000000;
     font-size: 17px;
     text-align: center;
-
 }
+
+.lang:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
 
 .instagram{
     width: 500px;
@@ -679,6 +702,66 @@ nav a:hover{
     .middle{
         width: auto;
     }
+}
+
+.lang {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    width: 70px;
+    height: 40px;
+    background: #0b56b7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 150px;
+    background: #0b56b7;
+    z-index: 9999;
+
+    text-shadow: none;
+}
+
+.lang-menu a,
+.lang-menu a:visited,
+.lang-menu a:hover {
+    text-shadow: initial !important;
+}
+
+.lang-menu,
+.lang-menu * {
+    text-shadow: unset !important;
+}
+
+.lang-menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+.lang-menu a:hover {
+    background: white;
+    color: #0b56b7;
+}
+
+.lang:hover .lang-menu {
+    display: block;
 }
 
 @media(max-width:600px){
