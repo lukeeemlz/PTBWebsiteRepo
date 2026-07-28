@@ -671,7 +671,8 @@ main {
 
 .project-divider {
     width: 70%;
-    margin: 20px auto 0;
+    text-align: center;
+    margin: 5px auto 0;
     border: none;
     border-top: 3px solid #0056b3;
 }

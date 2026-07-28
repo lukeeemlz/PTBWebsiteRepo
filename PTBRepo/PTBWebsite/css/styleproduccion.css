@@ -491,6 +491,96 @@ margin-top: 150px;
     gap: 8px;
 }
 
+.lang-menu,
+.lang-menu * {
+    text-shadow: none !important;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: inherit;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.lang:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+}
+
+.lang {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    width: 70px;
+    height: 40px;
+    background: #0b56b7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.lang-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 150px;
+    background: #0b56b7;
+    z-index: 9999;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    text-shadow: none;
+}
+
+.lang-menu a,
+.lang-menu a:visited,
+.lang-menu a:hover {
+    text-shadow: initial !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+}
+
+.lang-menu,
+.lang-menu * {
+    text-shadow: unset !important;
+}
+
+.lang-menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.lang-menu a:hover {
+    background-color: white;
+    color: #0b56b7;
+     transition: background-color 0.2s ease, color 0.2s ease;
+
+}
+
+.lang:hover .lang-menu {
+    display: block;
+
+}
+
 
 .fa-location-dot{
     color: #fff;

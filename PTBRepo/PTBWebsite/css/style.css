@@ -462,6 +462,8 @@ main{
     visibility: visible;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
+    transition: background-color 0.2s ease, color 0.2s ease;
+
 }
 
 
@@ -733,7 +735,7 @@ nav a:hover{
     min-width: 150px;
     background: #0b56b7;
     z-index: 9999;
-
+    transition: background-color 0.2s ease, color 0.2s ease;
     text-shadow: none;
 }
 
@@ -741,6 +743,8 @@ nav a:hover{
 .lang-menu a:visited,
 .lang-menu a:hover {
     text-shadow: initial !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
 }
 
 .lang-menu,
@@ -753,11 +757,14 @@ nav a:hover{
     padding: 12px;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 .lang-menu a:hover {
-    background: white;
+    background-color: white;
     color: #0b56b7;
+     transition: background-color 0.2s ease, color 0.2s ease;
+
 }
 
 .lang:hover .lang-menu {
