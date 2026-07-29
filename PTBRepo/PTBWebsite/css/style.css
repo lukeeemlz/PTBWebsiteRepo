@@ -123,6 +123,18 @@ header{ /* montse */
     position: relative;
     display: inline-block;
     padding-bottom: 8px;
+    z-index: 99999;
+}
+
+header {
+    position: relative;
+    z-index: 999999;
+    isolation: isolate;
+}
+
+main {
+    position: relative;
+    z-index: 1;
 }
 
 .dropdown-content {
@@ -706,6 +718,34 @@ nav a:hover{
     }
 }
 
+.lang-menu,
+.lang-menu * {
+    text-shadow: none !important;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: inherit;
+    text-shadow: 1px 1px 2px black;
+
+}
+
+.lang:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+}
+
 .lang {
     position: relative;
     display: inline-block;
@@ -728,15 +768,24 @@ nav a:hover{
 }
 
 .lang-menu {
-    display: none;
     position: absolute;
     top: 100%;
     right: 0;
+
     min-width: 150px;
     background: #0b56b7;
     z-index: 9999;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    text-shadow: none;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
 }
 
 .lang-menu a,
@@ -760,15 +809,135 @@ nav a:hover{
     text-align: center;
 }
 
-.lang-menu a:hover {
-    background-color: white;
-    color: #0b56b7;
-     transition: background-color 0.2s ease, color 0.2s ease;
-
+.lang:hover .lang-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .lang:hover .lang-menu {
     display: block;
+
+}
+
+.lang-menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.lang-menu a:hover {
+    background-color: white;
+    color: #0b56b7;
+}
+
+
+header {
+    animation: headerReveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+main {
+    animation: contentReveal 1.1s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.contáctanos {
+    animation: contentReveal 1.1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+
+/* Header comes slightly from above */
+@keyframes headerReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+@keyframes contentReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
+.ptblogo,
+nav,
+.header-right,
+.lang {
+    animation: headerEnter .8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ptblogo {
+    animation-delay: .05s;
+}
+
+nav {
+    animation-delay: .15s;
+}
+
+.header-right {
+    animation-delay: .25s;
+}
+
+.lang {
+    animation-delay: .35s;
+}
+
+.ptblogo {
+    animation-delay: .1s;
+}
+
+nav {
+    animation-delay: .2s;
+}
+
+.header-right {
+    animation-delay: .3s;
+}
+
+.lang {
+    animation-delay: .4s;
+}
+
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        top: -15px;
+    }
+
+    to {
+        opacity: 1;
+        top: 0;
+    }
 }
 
 @media(max-width:600px){

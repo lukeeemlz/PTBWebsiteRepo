@@ -12,14 +12,12 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="../css/stylecontactanos.css">
-
-    <script src="../java/indexJava.js"></script>
-    <script src="js/nav.js"></script>
+    <link rel="stylesheet" href="../../css/stylecontactanos.css">
 
     <title>Earth Globe Icon - Font Awesome</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <script src="https://elfsightcdn.com/platform.js" async></script>
 </head>
 
 <body>
@@ -32,43 +30,44 @@
 
     <nav>
         <ul>
-    <a href="empresa.html" class="menu-item">EMPRESA</a>
-    <a href="produccion.html" class="menu-item">PRODUCCIÓN</a>
-    <a href="productos.html" class="menu-item">PRODUCTOS</a>
-    <li class="dropdown">
-    <a href="maquinaria.html" class="menu-item">MAQUINARIA</a>
+    <a href="companyEN.html" class="menu-item">COMPANY</a>
+    <a href="productionEN.html" class="menu-item">PRODUCTION</a>
+    <a href="productsEN.html" class="menu-item">PRODUCTS</a>
+<li class="dropdown">
+    <a href="machineEN.html" class="menu-item">MACHINERY</a>
 
     <div class="dropdown-content">
-        <a href="taller.html">Taller</a>
-        <a href="fabrica.html">Fábrica</a>
+        <a href="workshopEN.html">Taller</a>
+        <a href="factoryEN.html">Fábrica</a>
     </div>
-</li>
-    <a href="contactanos.html" class="menu-item">CONTÁCTENOS</a>
+</li>    <a href="contactEN.html" class="menu-item">CONTACT</a>
         </ul>
     </nav>
 <div class="header-right">
     <div class="scroll-text">
 
         <div class="scroll-group">
-            <span>Reparación y modificación de piezas plásticas</span>
+            <span>Repair and modification of plastic pieces</span>
             <span>•</span>
-            <span>Fabricación de moldes</span>
+            <span>Mold manufacturing</span>
             <span>•</span>
-            <span>Mantenimiento y reparación de moldes</span>
+            <span> Maintenance and repair of molds</span>
             <span>•</span>
         </div>
 
         <div class="scroll-group">
-            <span>Reparación y modificación de piezas plásticas</span>
+          <span>Repair and modification of plastic pieces</span>
             <span>•</span>
-            <span>Fabricación de moldes</span>
+            <span>Mold manufacturing</span>
             <span>•</span>
-            <span>Mantenimiento y reparación de moldes</span>
+            <span> Maintenance and repair of molds</span>
             <span>•</span>
         </div>
 
     </div>
 </div>
+</div>
+
 <div class="lang">
     <button class="lang-btn">
         <i class="fa-solid fa-globe"></i>
@@ -77,9 +76,10 @@
 
     <div class="lang-menu">
         <a href="/PTBRepo/PTBWebsite/html/contactanos.html">Español</a>
-        <a href="../html/CA/contactosCA.html">Català</a>
-        <a href="../html/EN/contactEN.html">English</a>
+        <a href="../../html/CA/contactosCA.html">Català</a>
+        <a href="../../html/EN/contactEN.html">English</a>
     </div>
+</div>
 </header>
 
 <main>
@@ -87,57 +87,57 @@
 <div class="contact-layout">
 
     <div class="form-section">
-        <h2>FORMULARIO DE CONTACTO</h2>
+        <h2>CONTACT FORM</h2>
 
-<form id="contactForm" class="contact-form">
+        <form class="contact-form">
 
-            <label for="name">Nombre</label>
+            <label for="name">Name</label>
             <input
                 type="text"
                 id="name"
-                name="from_name"
+                name="name"
                 required
             >
 
-            <label for="email">Su correo electrónico</label>
+            <label for="email">Email</label>
             <input
                 type="email"
                 id="email"
-                name="from_email"
+                name="email"
                 required
             >
 
+<label for="department">Department</label>
 <select id="department" name="department" required>
-    <option value="taller@ptbplasticos.com">Taller</option>
-    <option value="comercial@ptbplasticos.com">Fábrica</option>
+    <option value=administracion@ptbplasticos.com>Workshop</option>
+    <option value=comercial@ptbplasticos.com>Factory</option>
 </select>
 
-            <label for="subject">Asunto</label>
+            <label for="subject">Subject</label>
             <input
                 type="text"
                 id="subject"
                 name="subject"
             >
 
-            <label for="message">Mensaje</label>
+            <label for="message">Message</label>
             <textarea
                 id="message"
                 name="message"
                 required
             ></textarea>
-                    <button type="submit" class="send-button">
-    ENVIAR
-</button>
 
         </form>
+
+        <button class="send-button">SUBMIT</button>
     </div>
 
 <div class="ProyectoSection">
 
     <div class="ProyectoTitle">
-        <h2>Contáctenos y haremos realidad su proyecto</h2>
+        <h2>Contact us and we'll make your project a reality</h2>
         <hr class="project-divider">
-        <p>Estamos aquí para asesorarle y ofrecerle la solución que necesita</p>
+        <p>We're here to advise you and offer you the solution you need</p>
     </div>
 
     <div class="maps">
@@ -155,18 +155,12 @@
 
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-emailjs.init({
-    publicKey: "iNzLI0zRZH2OUtCuL"
-});
-</script>
-
-<script src="../java/contact.js"></script>
-
-
 </main>
+
+<script src="../../java/IndexJSEN.js"></script>
+    <script src="../../java/nav.js"></script>
+    <script src="../../java/rotatingimages.js"></script>
+     <script src="../../java/fade.js"></script>
 
 </body>
 </html>

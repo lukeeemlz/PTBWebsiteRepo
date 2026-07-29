@@ -228,7 +228,7 @@ padding-bottom: 30px;
     position: absolute;
     top: 0;
     right: 5px;
-    margin-top: 160px;
+    margin-top: 70px;
 }
 
 .CalidadImg img{
@@ -236,7 +236,7 @@ padding-bottom: 30px;
     position: absolute;
     top: 0;
     left: 5px;
-    margin-top: 580px;
+    margin-top: 450px;
 }
 
 
@@ -484,11 +484,90 @@ margin-top: 150px;
     margin-right: 20px;
 }
 
+@keyframes headerEnter {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes pageEnter {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+main {
+    animation: pageEnter 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.contáctanos {
+    animation: pageEnter 1s .15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ptblogo,
+nav,
+.header-right,
+.lang {
+    animation: headerEnter .8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.ptblogo {
+    animation-delay: .05s;
+}
+
+nav {
+    animation-delay: .15s;
+}
+
+.header-right {
+    animation-delay: .25s;
+}
+
+.lang {
+    animation-delay: .35s;
+}
+
+header {
+    position: relative;
+    z-index: 999999;
+    isolation: isolate;
+}
+
 .email p {
     display: flex;
     align-items: center;
     margin: 0;
     gap: 8px;
+}
+
+.lang-menu a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.lang-menu a:hover {
+    background-color: white;
+    color: #0b56b7;
 }
 
 .lang-menu,
@@ -512,6 +591,10 @@ margin-top: 150px;
     pointer-events: auto;
     transform: translateX(-50%) translateY(0);
     transition: background-color 0.2s ease, color 0.2s ease;
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
 
 }
 
@@ -537,15 +620,24 @@ margin-top: 150px;
 }
 
 .lang-menu {
-    display: none;
     position: absolute;
     top: 100%;
     right: 0;
+
     min-width: 150px;
     background: #0b56b7;
     z-index: 9999;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    text-shadow: none;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
 }
 
 .lang-menu a,
@@ -569,11 +661,11 @@ margin-top: 150px;
     text-align: center;
 }
 
-.lang-menu a:hover {
-    background-color: white;
-    color: #0b56b7;
-     transition: background-color 0.2s ease, color 0.2s ease;
-
+.lang:hover .lang-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .lang:hover .lang-menu {
