@@ -1,5 +1,5 @@
 emailjs.init({
-    publicKey: "iNzLI0zRZH2OUtCuL",
+    publicKey: "iNzLI0zRZH2OUtCuL"
 });
 
 const form = document.getElementById("contactForm");
@@ -17,7 +17,7 @@ form.addEventListener("submit", function (e) {
         form.reset();
     })
     .catch((error) => {
-        console.error(error);
+        console.error("EmailJS error:", error);
         alert("No se pudo enviar el mensaje.");
     });
 });

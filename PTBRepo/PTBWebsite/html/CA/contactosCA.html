@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="../../css/stylecontactanos.css">
+    <link rel="stylesheet" href="../../css/stylecontactoCA.css">
 
     <title>Earth Globe Icon - Font Awesome</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -86,18 +86,20 @@
 
 <main>
 
+<main>
+
 <div class="contact-layout">
 
     <div class="form-section">
         <h2>FORMULARI DE CONTACTE</h2>
 
-        <form class="contact-form">
+<form id="contactForm" class="contact-form">
 
             <label for="name">Nom</label>
             <input
                 type="text"
                 id="name"
-                name="name"
+                name="from_name"
                 required
             >
 
@@ -105,14 +107,14 @@
             <input
                 type="email"
                 id="email"
-                name="email"
+                name="from_email"
                 required
             >
 
 <label for="department">Departament</label>
 <select id="department" name="department" required>
-    <option value=administracion@ptbplasticos.com>Taller</option>
-    <option value=comercial@ptbplasticos.com>Fàbrica</option>
+    <option value="taller@ptbplasticos.com">Taller</option>
+    <option value="comercial@ptbplasticos.com">Fàbrica</option>
 </select>
 
             <label for="subject">Assumpte</label>
@@ -128,12 +130,12 @@
                 name="message"
                 required
             ></textarea>
+                    <button type="submit" class="send-button">
+    ENVIAR
+</button>
 
         </form>
-
-        <button class="send-button">ENVIAR</button>
     </div>
-
 <div class="ProyectoSection">
 
     <div class="ProyectoTitle">

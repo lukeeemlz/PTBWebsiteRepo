@@ -280,8 +280,8 @@ main{
     align-items:flex-start;
     gap:0;
     position: relative;
-    top: -40px;
-}
+    top: 0;
+    margin-top: -40px !important;}
 
 .left{
   width: 30%;
@@ -753,13 +753,16 @@ header {
 
 .gallery-window{
     width:400px;
-    height:400px;
+    height:450px;
     overflow:hidden;
+
 }
 
 .gallery-track{
     display:flex;
     transition:transform .5s ease;
+      margin-top: 20px;
+
 }
 
 .gallery-track img{
@@ -768,6 +771,7 @@ header {
     height:400px;
     flex:0 0 100%;
     object-fit:contain;
+
 }
 
 .gallery-btn:hover{

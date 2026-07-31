@@ -18,7 +18,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="https://elfsightcdn.com/platform.js" async></script>
-</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+</head> 
 
 <body>
 
@@ -89,13 +92,13 @@
     <div class="form-section">
         <h2>CONTACT FORM</h2>
 
-        <form class="contact-form">
+<form id="contactForm" class="contact-form">
 
             <label for="name">Name</label>
             <input
                 type="text"
                 id="name"
-                name="name"
+                name="from_name"
                 required
             >
 
@@ -103,14 +106,15 @@
             <input
                 type="email"
                 id="email"
-                name="email"
+                name="from_email"
                 required
             >
 
 <label for="department">Department</label>
+
 <select id="department" name="department" required>
-    <option value=administracion@ptbplasticos.com>Workshop</option>
-    <option value=comercial@ptbplasticos.com>Factory</option>
+    <option value="taller@ptbplasticos.com">Workshop</option>
+    <option value="comercial@ptbplasticos.com">Factory</option>
 </select>
 
             <label for="subject">Subject</label>
@@ -126,12 +130,12 @@
                 name="message"
                 required
             ></textarea>
+                    <button type="submit" class="send-button">
+    SUBMIT
+</button>
 
         </form>
-
-        <button class="send-button">SUBMIT</button>
     </div>
-
 <div class="ProyectoSection">
 
     <div class="ProyectoTitle">
@@ -161,6 +165,7 @@
     <script src="../../java/nav.js"></script>
     <script src="../../java/rotatingimages.js"></script>
      <script src="../../java/fade.js"></script>
+     <script src="../../java/contact.js"></script>
 
 </body>
 </html>
