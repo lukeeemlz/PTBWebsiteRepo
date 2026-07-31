@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # This creates folder variations across every hierarchy layer so all path formats find their images
+      # This creates the literal folder containers your "../images" links are looking for
       - name: Restructure website files
         run: |
           mkdir -p staging/PTBRepo/PTBWebsite
@@ -34,16 +34,17 @@ jobs:
           cp -r PTBRepo/PTBWebsite/css staging/PTBRepo/PTBWebsite/
           cp -r PTBRepo/PTBWebsite/html staging/PTBRepo/PTBWebsite/
           
-          # 2. Universal Image Mapping: Make copies directly inside every nested level to intercept broken links
+          # 2. Replicate the images folder container into your subdirectories 
+          mkdir -p staging/PTBRepo/PTBWebsite/images
           mkdir -p staging/PTBRepo/PTBWebsite/html/images
-          mkdir -p staging/PTBRepo/PTBWebsite/html/CA/images
-          mkdir -p staging/PTBRepo/PTBWebsite/html/EN/images
           
+          cp -r images/* staging/PTBRepo/PTBWebsite/images/
           cp -r images/* staging/PTBRepo/PTBWebsite/html/images/
-          cp -r images/* staging/PTBRepo/PTBWebsite/html/CA/images/
-          cp -r images/* staging/PTBRepo/PTBWebsite/html/EN/images/
           
-          # 3. Add an automatic bounce rule at the root to drop visitors onto your primary index file
+          # 3. Create absolute fallback path compatibility layers for your language switchers
+          cp PTBRepo/PTBWebsite/html/*.html staging/PTBRepo/PTBWebsite/ 2>/dev/null || true
+          
+          # 4. Add an automatic bounce rule at the root to drop visitors onto your primary index file
           echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./PTBRepo/PTBWebsite/html/index.html" /><script>window.location.href="./PTBRepo/PTBWebsite/html/index.html";</script></head></html>' > staging/index.html
 
       # Fix for Jekyll parser treating folder paths strictly
@@ -59,7 +60,7 @@ jobs:
         with:
           path: './staging'
 
-      # Standard clean deployment action with no duplicate ID flags
+      # Standard deployment step assigned to the correct "deployment" identifier
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
