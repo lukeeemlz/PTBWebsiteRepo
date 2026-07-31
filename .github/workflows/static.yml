@@ -24,17 +24,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # This creates the exact folder tree shown in your VS Code sidebar
+      # This creates an identical layout copy of your VS Code workspace
       - name: Restructure website files
         run: |
           mkdir -p staging/PTBRepo/PTBWebsite
+          
+          # 1. Map your full folder structure exactly as it sits locally
           cp -r images staging/
           cp -r PTBRepo/PTBWebsite/css staging/PTBRepo/PTBWebsite/
           cp -r PTBRepo/PTBWebsite/html staging/PTBRepo/PTBWebsite/
           
-          # This root file forces your main short URL to jump directly into the html folder
+          # 2. Add an automatic bounce rule at the root to drop visitors onto your primary index file
           echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./PTBRepo/PTBWebsite/html/index.html" /><script>window.location.href="./PTBRepo/PTBWebsite/html/index.html";</script></head></html>' > staging/index.html
 
+      # Fix for Jekyll parser treating folder paths strictly
+      - name: Add nojekyll rule
+        run: touch staging/.nojekyll
+
+      # Set up deployment configurations
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -42,6 +49,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './staging'
+
+      - name: Deploy to GitHub Pages
+        id: pages_deployment
+        uses: actions/deploy-pages@v4
+
 
       - name: Deploy to GitHub Pages
         id: pages_deployment
