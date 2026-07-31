@@ -24,18 +24,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # This step copies everything out of your subfolders and into a clean workspace
+      # This aligns the folders perfectly so your "../" links can find your styles and images
       - name: Restructure website files
         run: |
-          mkdir staging
+          mkdir -p staging/html
           cp -r images staging/
           cp -r PTBRepo/PTBWebsite/css staging/
-          cp -r PTBRepo/PTBWebsite/html/* staging/
+          cp -r PTBRepo/PTBWebsite/html/* staging/html/
+          
+          # This simple root file forwards visitors straight to your homepage instantly
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./html/index.html" /><script>window.location.href="./html/index.html";</script></head></html>' > staging/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      # This uploads our clean staging folder as the website root
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -44,4 +46,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
