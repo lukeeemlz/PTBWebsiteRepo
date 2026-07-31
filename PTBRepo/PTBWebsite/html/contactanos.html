@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTB</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/stylecontactanos.css">
+
+    <script src="../java/indexJava.js"></script>
+    <script src="js/nav.js"></script>
+
+    <title>Earth Globe Icon - Font Awesome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="ptblogo">
+        <img src="../../../images/ptblogo.png" alt="PTB logo">
+    </div>
+
+    <nav>
+        <ul>
+    <a href="empresa.html" class="menu-item">EMPRESA</a>
+    <a href="produccion.html" class="menu-item">PRODUCCIÓN</a>
+    <a href="productos.html" class="menu-item">PRODUCTOS</a>
+    <li class="dropdown">
+    <a href="maquinaria.html" class="menu-item">MAQUINARIA</a>
+
+    <div class="dropdown-content">
+        <a href="taller.html">Taller</a>
+        <a href="fabrica.html">Fábrica</a>
+    </div>
+</li>
+    <a href="contactanos.html" class="menu-item">CONTÁCTENOS</a>
+        </ul>
+    </nav>
+<div class="header-right">
+    <div class="scroll-text">
+
+        <div class="scroll-group">
+            <span>Reparación y modificación de piezas plásticas</span>
+            <span>•</span>
+            <span>Fabricación de moldes</span>
+            <span>•</span>
+            <span>Mantenimiento y reparación de moldes</span>
+            <span>•</span>
+        </div>
+
+        <div class="scroll-group">
+            <span>Reparación y modificación de piezas plásticas</span>
+            <span>•</span>
+            <span>Fabricación de moldes</span>
+            <span>•</span>
+            <span>Mantenimiento y reparación de moldes</span>
+            <span>•</span>
+        </div>
+
+    </div>
+</div>
+<div class="lang">
+    <button class="lang-btn">
+        <i class="fa-solid fa-globe"></i>
+        ES
+    </button>
+
+    <div class="lang-menu">
+        <a href="contactanos.html">Español</a>
+        <a href="../html/CA/contactosCA.html">Català</a>
+        <a href="../html/EN/contactEN.html">English</a>
+    </div>
+</header>
+
+<main>
+
+<div class="contact-layout">
+
+    <div class="form-section">
+        <h2>FORMULARIO DE CONTACTO</h2>
+
+<form id="contactForm" class="contact-form">
+
+            <label for="name">Nombre</label>
+            <input
+                type="text"
+                id="name"
+                name="from_name"
+                required
+            >
+
+            <label for="email">Su correo electrónico</label>
+            <input
+                type="email"
+                id="email"
+                name="from_email"
+                required
+            >
+            
+<label for="department">Departamento</label>
+<select id="department" name="department" required>
+    <option value="taller@ptbplasticos.com">Taller</option>
+    <option value="comercial@ptbplasticos.com">Fábrica</option>
+</select>
+
+            <label for="subject">Asunto</label>
+            <input
+                type="text"
+                id="subject"
+                name="subject"
+            >
+
+            <label for="message">Mensaje</label>
+            <textarea
+                id="message"
+                name="message"
+                required
+            ></textarea>
+                    <button type="submit" class="send-button">
+    ENVIAR
+</button>
+
+        </form>
+    </div>
+
+<div class="ProyectoSection">
+
+    <div class="ProyectoTitle">
+        <h2>Contáctenos y haremos realidad su proyecto</h2>
+        <hr class="project-divider">
+        <p>Estamos aquí para asesorarle y ofrecerle la solución que necesita</p>
+    </div>
+
+    <div class="maps">
+        <div class="ptbmap">
+            <iframe         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2834.6394584693753!2d2.2526040758916124!3d41.62989397127008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c700238d3cd5%3A0x5b7103de0b3435bd!2sPTB%20(Pl%C3%A1sticos%20T%C3%A9cnicos%20Barcelona%20S.L)!5e1!3m2!1sen!2ses!4v1783931746669!5m2!1sen!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+"
+></iframe>
+        </div>
+
+        <div class="gaussmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2832.9729805020593!2d2.224839!3d41.6677793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4c6f063389b27%3A0x361fd1262989e9a4!2sPlasticos%20Tecnicos%20de%20Barcelona!5e1!3m2!1sen!2ses!4v1783795652425!5m2!1sen!2ses"
+></iframe>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "iNzLI0zRZH2OUtCuL"
+});
+</script>
+
+<script src="../java/contact.js"></script>
+
+
+</main>
+
+</body>
+</html>
