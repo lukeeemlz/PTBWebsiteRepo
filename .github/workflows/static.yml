@@ -24,16 +24,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # This aligns the folders perfectly so your "../" links can find your styles and images
+      # This creates the exact folder tree shown in your VS Code sidebar
       - name: Restructure website files
         run: |
-          mkdir -p staging/html
+          mkdir -p staging/PTBRepo/PTBWebsite
           cp -r images staging/
-          cp -r PTBRepo/PTBWebsite/css staging/
-          cp -r PTBRepo/PTBWebsite/html/* staging/html/
+          cp -r PTBRepo/PTBWebsite/css staging/PTBRepo/PTBWebsite/
+          cp -r PTBRepo/PTBWebsite/html staging/PTBRepo/PTBWebsite/
           
-          # This simple root file forwards visitors straight to your homepage instantly
-          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./html/index.html" /><script>window.location.href="./html/index.html";</script></head></html>' > staging/index.html
+          # This root file forces your main short URL to jump directly into the html folder
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./PTBRepo/PTBWebsite/html/index.html" /><script>window.location.href="./PTBRepo/PTBWebsite/html/index.html";</script></head></html>' > staging/index.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -42,6 +42,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: './staging'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
 
       - name: Deploy to GitHub Pages
         id: deployment
