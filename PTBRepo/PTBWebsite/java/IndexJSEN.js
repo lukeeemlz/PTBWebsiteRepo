@@ -10,7 +10,7 @@ function makeLogoClickable() {
 
 
         logo.addEventListener("click", function () {
-            window.location.href = "EN/IndexEN.html";
+            window.location.href = "IndexEN.html";
         });
     } else {
         setTimeout(makeLogoClickable, 300);
